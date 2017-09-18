@@ -15,8 +15,8 @@ function run(t, name, opts = {}) {
     return postcss([plugin(opts), autoprefixer()])
         .process(input)
         .then(result => {
-            t.deepEqual(result.css, output);
-            t.deepEqual(result.warnings().length, 0);
+            t.is(result.css, output);
+            t.is(result.warnings().length, 0);
         });
 }
 

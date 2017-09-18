@@ -66,13 +66,11 @@ function mediaRule(min, max, rule) {
     if (validValue(max)) {
         breakpoints.push('(max-width: ' + max + ')');
     }
-    return postcss.atRule({
-        name: 'media',
-        params: breakpoints.join(' and '),
-        nodes: rule.nodes,
-        parent: rule.parent,
-        raws: rule.raws
-    });
+
+    const clonedRule = rule.clone();
+    clonedRule.name = 'media';
+    clonedRule.params = breakpoints.join(' and ');
+    return clonedRule;
 }
 
 /**

@@ -19,12 +19,12 @@
   },
   "homepage": "https://github.com/minhtranite/postcss-breakpoints",
   "dependencies": {
-    "postcss": "^5.2.0"
+    "postcss": "^6.0.11"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.1",
-    "ava": "^0.16.0",
-    "eslint": "^3.4.0",
+    "autoprefixer": "^7.1.4",
+    "ava": "^0.22.0",
+    "eslint": "^4.7.0",
     "eslint-config-postcss": "^2.0.2"
   },
   "scripts": {
